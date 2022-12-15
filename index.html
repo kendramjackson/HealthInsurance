@@ -15,13 +15,14 @@
         background-color: #bcd4e6;
     }
 </style>
+<script>alert("Hello, answer the following questions and then get matched with an insurace plan. Note that there is an table to the right that can help you figure out your BMI. To make sure you are matched with a plan click the calculate risk button!");</script>
 
 
 
 
 <body>
     <h1> Health Insurance Matcher</h1> 
-    <p>Here are the rules answer the folllowing questions by selecting an option and then click calculate compatibility!</p>
+    <p>Here are the rules answer the folllowing questions by selecting an option and then click calculate risk!</p>
     <label> How old are you</label><br />
     <select id="q1">
         <option value="0">30 years old or younger</option>
@@ -114,13 +115,17 @@ console.log("tRisk="+ totalRisk);
 
 if (totalRisk <="20") {
         document.getElementById("90").innerHTML = "Low risk"
+        //popup1
     }else if(totalRisk <="50"&& "20"< totalRisk){
         document.getElementById("70").innerHTML = "Moderate risk)"
+        //popup2
     }else if(totalRisk <='75'&& '50'< totalRisk){
         document.getElementById("69").innerHTML = "High Risk"
+        //popup3
     
   }else{
     document.getElementById("69").innerHTML = "Uninsurable"
+    //popup4
   }
 
   
@@ -130,7 +135,6 @@ if (totalRisk <="20") {
 }
 </script>
 
-</script>
 
 
 </body>
