@@ -66,6 +66,9 @@
 
     <button onclick="calculateRisk()">Calculate Risk</button>
     <p id="calculateRisk"></p>
+    <p id="90"></p>
+    <p id="70"></p>
+    <p id="69"></p>
 
 
 <script>
@@ -102,19 +105,34 @@ console.log(question3Response);
 
 var totalRisk = (+question1Response) + (+question2Response) + (+question3Response) + (+question4Response);
 console.log("tRisk="+ totalRisk);
-}
 
 
-//<button onclick="calculateRisk()">Calculate Risk</button>
 
-//if (totalRisk < "20"){
-//    <input type="button" onclick="window.location.href = 'https://google.com';" value="Click here"/>
-//}
 
+
+
+
+
+if (totalRisk <="20") {
+        document.getElementById("90").innerHTML = "Low risk"
+    }else if(totalRisk <="50"&& "20"< totalRisk){
+        document.getElementById("70").innerHTML = "Moderate risk)"
+    }else if(totalRisk <='75'&& '50'< totalRisk){
+        document.getElementById("69").innerHTML = "High Risk"
     
+  }else{
+    document.getElementById("69").innerHTML = "Uninsurable"
+  }
 
+  
+
+
+
+}
+</script>
 
 </script>
+
 
 </body>
 </html>
