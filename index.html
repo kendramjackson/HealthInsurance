@@ -8,8 +8,6 @@
     img {
         width: 500px;
         border: 5px solid black;
-        resize: both;
-        overflow: scroll;
     }
 
     </style>
@@ -28,7 +26,7 @@
 
 </style>
 </body>
-<script>alert("Hello, answer the following questions and then get matched with an insurace plan. Note that there is an table to the right that can help you figure out your BMI. To make sure you are matched with a plan click the calculate risk button!");</script>
+<script>alert("Hello, answer the following questions and then get matched with an insurance plan. Note that there is an table to the right that can help you figure out your BMI. To make sure you are matched with a plan click the calculate risk button!");</script>
 
 
 
@@ -136,7 +134,7 @@ if (totalRisk <="20") {
         let result = text.link('https://www.cigna.com/individuals-families/shop-plans/health-insurance-plans/illinois?state=Illinois&county=Will');
         document.getElementById('web1').innerHTML = result;
     }else if(totalRisk <="50"&& "20"< totalRisk){
-        document.getElementById("70").innerHTML = "Moderate risk: Silver)"
+        document.getElementById("70").innerHTML = "Moderate risk: Silver"
         let text = "Your Insurance Match"
         let result = text.link('https://www.cigna.com/individuals-families/shop-plans/health-insurance-plans/illinois?state=Illinois&county=Will');
         document.getElementById('web2').innerHTML = result;
