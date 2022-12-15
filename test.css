@@ -1,6 +1,5 @@
-.popup .overlay {
-    position: fixed;
-    top:0px;
-    left:0px;
-    
-}
+
+    <img align="right" src="bmi.jpg" style="width: 350px;">
+    resize: both;
+    overflow: auto; 
+  }

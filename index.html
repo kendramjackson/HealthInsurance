@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title> Health Insurance</title>
+    <style>
+    
+    img {
+        width: 500px;
+        border: 5px solid black;
+        resize: both;
+        overflow: scroll;
+    }
 
-<body>
-    <img align="right" src="bmi.jpg" style="width: 350px;">
-    </body>.
+    </style>
+    <img align="right" src="bmi.jpg">
+    
 </head>
+<body>
 <style type="text/css">
     body {
         text-align: center;
         font-family: Tahoma;
         background-color: #bcd4e6;
     }
+
+
+
 </style>
+</body>
 <script>alert("Hello, answer the following questions and then get matched with an insurace plan. Note that there is an table to the right that can help you figure out your BMI. To make sure you are matched with a plan click the calculate risk button!");</script>
 
 
@@ -69,6 +82,10 @@
     <p id="90"></p>
     <p id="70"></p>
     <p id="69"></p>
+    <p id="web1"></p>
+    <p id="web2"></p>
+    <p id="web3"></p>
+    <p id="web4"></p>
 
 
 <script>
@@ -114,18 +131,26 @@ console.log("tRisk="+ totalRisk);
 
 
 if (totalRisk <="20") {
-        document.getElementById("90").innerHTML = "Low risk"
-        //popup1
+        document.getElementById("90").innerHTML = "Low risk: Bronze" 
+        let text = "Your Insurance Match"
+        let result = text.link('https://www.cigna.com/individuals-families/shop-plans/health-insurance-plans/illinois?state=Illinois&county=Will');
+        document.getElementById('web1').innerHTML = result;
     }else if(totalRisk <="50"&& "20"< totalRisk){
-        document.getElementById("70").innerHTML = "Moderate risk)"
-        //popup2
+        document.getElementById("70").innerHTML = "Moderate risk: Silver)"
+        let text = "Your Insurance Match"
+        let result = text.link('https://www.cigna.com/individuals-families/shop-plans/health-insurance-plans/illinois?state=Illinois&county=Will');
+        document.getElementById('web2').innerHTML = result;
     }else if(totalRisk <='75'&& '50'< totalRisk){
-        document.getElementById("69").innerHTML = "High Risk"
-        //popup3
+        document.getElementById("69").innerHTML = "High Risk: Gold"
+        let text = "Your Insurance Match"
+        let result = text.link('https://www.cigna.com/individuals-families/shop-plans/health-insurance-plans/illinois?state=Illinois&county=Will');
+        document.getElementById('web3').innerHTML = result;
     
   }else{
     document.getElementById("69").innerHTML = "Uninsurable"
-    //popup4
+    let text = "You are uninsurable but there are still options to look at to get life insurance"
+        let result = text.link('https://www.insure.com/life-insurance/uninsurable.html');
+        document.getElementById('web4').innerHTML = result;
   }
 
   
